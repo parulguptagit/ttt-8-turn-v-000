@@ -3,18 +3,30 @@ def display_board(board)
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
+<<<<<<< HEAD
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 def valid_move?(board, index)
   if index.between?(0,8) && !position_taken?(board,index)
+=======
+  puts " #{board[6]} | #{board[7]} | #{board[8]}"
+end
+
+def valid_move?(board, index)
+  if index.between(0,8) && !position_taken?(board,index)
+>>>>>>> 89388dca4f0f971283949312999d74ccd818de24
     return TRUE
   else
     return FALSE
   end
 end
 
+<<<<<<< HEAD
 def position_taken?(board, index)
+=======
+def position_taken(board, index)
+>>>>>>> 89388dca4f0f971283949312999d74ccd818de24
   if board[index]==" " || board[index]=="" || board[index] == NIL
     return FALSE
   else
@@ -25,6 +37,7 @@ end
 def input_to_index(user_input)
   return user_input.to_i - 1
 end
+<<<<<<< HEAD
 
 def move(board, index, token)
   board[index] = token
@@ -43,3 +56,6 @@ def turn(board)
   end
   display_board(board)
 end
+=======
+  
+>>>>>>> 89388dca4f0f971283949312999d74ccd818de24
